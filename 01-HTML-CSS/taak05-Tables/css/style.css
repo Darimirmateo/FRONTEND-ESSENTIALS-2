@@ -1,0 +1,14 @@
+div{
+    /* alle divs worden blauw */
+    background-color: blue;
+}
+
+.class-toegekend-aan-een-div{
+    /* alle divs met deze class worden rood */
+    background-color: red;
+}
+
+#id-toegekend-aan-een-div{
+    /* Eén specieke div wordt groen */
+    background-color: green;
+}

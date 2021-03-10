@@ -20,21 +20,37 @@
     height: 30px;
     border-radius: 50%;
     background-color: #fff;
+   
 }
 
 .links, .rechts, .midden{
     width: 100%;
     height: 100%;
+    margin-top: 25px;
 }
 
 /* TIP: Laat bovenstaande code staan */
-
+.dobbelsteen{
+    align-items: center;
+    justify-content: center;
+}
 /* dobbelsteen1 */
+.dobbelsteen1,{
+    align-items: center;
+    justify-content: center;
+}
 
 /* dobbelsteen2 */
-
+.stip .dobbelsteen2 .links .rechts{
+    
+    display: inline;
+    
+}
 /* dobbelsteen3 */
-
+.dobbelsteen .dobbelsteen1 .dobbelsteen2 .links .rechts .onder .midden{
+    justify-content: flex-end;
+    display: flexbox
+} 
 /* dobbelsteen4 */
 
 /* dobbelsteen5 */
