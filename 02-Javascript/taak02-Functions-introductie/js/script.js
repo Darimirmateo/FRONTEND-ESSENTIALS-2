@@ -7,6 +7,17 @@ function toonAlertBox(){
 toonAlertBox();
 
 
+function  toonprompt(){
+          prompt("wat is je naam");
+          
+
+
+
+}
+console.log();
+
+
+
 
 
 
