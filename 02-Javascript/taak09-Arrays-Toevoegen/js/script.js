@@ -23,7 +23,7 @@ function kiesFilm(){
 }
 
 topFilms = ["The Godfather", "The Shawshank Redemption", "Schindler's List"];
-topFilmsOmgedraaid = []; //lege array, hierin komen de films uit topFilms in omgekeerde volgorde
+topFilmsOmgedraaid = []; //lege array, hierin komen de films uit topFilms in omgekeerde volgorden
 
 topFilmsOmgedraaid.push(topFilms[2]); 
 topFilmsOmgedraaid.push(topFilms[1]);
