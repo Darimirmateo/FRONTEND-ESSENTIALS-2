@@ -25,25 +25,33 @@ for(i = 0; i < topFilms.length; i++){
 
 function kiesFilm(){
     var antw = prompt("Wat zijn je top 3 films ?");
-    console.log(antw);
+    // console.log(antw);
     var gekozenfilm = topFilms[antw-1];   
-    console.log(gekozenfilm);
+    // console.log(gekozenfilm);
     eigenTopFilms.push(gekozenfilm);
-    document.querySelector(".eigen-film1").innerHTML=[1];
+    document.querySelector(".eigen-film1").innerHTML=[gekozenfilm];
 
     var antw = prompt("Wat zijn je top 3 films ?");
-    console.log(antw);
+    // console.log(antw);
     var gekozenfilm = topFilms[antw-1];   
-    console.log(gekozenfilm);
+    // console.log(gekozenfilm);
     eigenTopFilms.push(gekozenfilm);
-    document.querySelector(".eigen-film2").innerHTML=[2];
+    document.querySelector(".eigen-film2").innerHTML=[gekozenfilm];
+
+   
 
     var antw = prompt("Wat zijn je top 3 films ?");
-    console.log(antw);
+    // console.log(antw);
     var gekozenfilm = topFilms[antw-1];   
-    console.log(gekozenfilm);
+    // console.log(gekozenfilm);
     eigenTopFilms.push(gekozenfilm);
-    document.querySelector(".eigen-film3").innerHTML=[3];
+    document.querySelector(".eigen-film3").innerHTML=[gekozenfilm];
+
+   
+
+
+
+   
 
 
 
