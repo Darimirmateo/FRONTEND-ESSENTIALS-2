@@ -12,10 +12,7 @@ topFilms = [
 ];
 
 
-
-
 eigenTopFilms = [];
-
 //met deze for-loop word de ordered list gevuld met film namen
 for(i = 0; i < topFilms.length; i++){
     document.querySelector(".imdb-film" + (i+1)).innerHTML = topFilms[i];
@@ -38,7 +35,7 @@ function kiesFilm(){
     eigenTopFilms.push(gekozenfilm);
     document.querySelector(".eigen-film2").innerHTML=[gekozenfilm];
 
-   
+
 
     var antw = prompt("Wat zijn je top 3 films ?");
     // console.log(antw);
@@ -46,12 +43,6 @@ function kiesFilm(){
     // console.log(gekozenfilm);
     eigenTopFilms.push(gekozenfilm);
     document.querySelector(".eigen-film3").innerHTML=[gekozenfilm];
-
-   
-
-
-
-   
 
 
 

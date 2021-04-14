@@ -16,3 +16,13 @@ document.querySelector(".film4-ranking").innerHTML = 4;
 document.querySelector(".film4-naam").innerHTML = topFilms[3];
 document.querySelector(".film5-ranking").innerHTML = 5;
 document.querySelector(".film5-naam").innerHTML = topFilms[4];
+
+
+
+function maakGroen(){
+    document.querySelector(".btn1-down").style.backgroundColor = "Green";
+    document.querySelector(".btn1-up").style.backgroundColor = "Blue";
+}
+
+
+ 
