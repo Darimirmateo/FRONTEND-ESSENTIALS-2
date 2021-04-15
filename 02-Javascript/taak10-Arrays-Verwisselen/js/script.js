@@ -24,5 +24,10 @@ function maakGroen(){
     document.querySelector(".btn1-up").style.backgroundColor = "Blue";
 }
 
+function maakGroen(){
+    document.querySelector(".btn1-down").style.backgroundColor = "Green";
+    document.querySelector(".btn1-up").style.backgroundColor = "Blue";
+}
+
 
  
