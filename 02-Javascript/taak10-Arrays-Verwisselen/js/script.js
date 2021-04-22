@@ -19,15 +19,11 @@ document.querySelector(".film5-naam").innerHTML = topFilms[4];
 
 
 
-function maakGroen(){
-    document.querySelector(".btn1-down").style.backgroundColor = "Green";
-    document.querySelector(".btn1-up").style.backgroundColor = "Blue";
+function move(){
+document.querySelector(".btn1-up(1)" + ".btn1-down(2)").innerHTML = move;
+    
 }
 
-function maakGroen(){
-    document.querySelector(".btn1-down").style.backgroundColor = "Green";
-    document.querySelector(".btn1-up").style.backgroundColor = "Blue";
-}
 
 
  
