@@ -6,23 +6,31 @@ topFilms = [
     "Casablanca"
 ];
 
-document.querySelector(".film1-ranking").innerHTML = 1;
-document.querySelector(".film1-naam").innerHTML = topFilms[0];
-document.querySelector(".film2-ranking").innerHTML = 2;
-document.querySelector(".film2-naam").innerHTML = topFilms[1];
-document.querySelector(".film3-ranking").innerHTML = 3;
-document.querySelector(".film3-naam").innerHTML = topFilms[2];
-document.querySelector(".film4-ranking").innerHTML = 4;
-document.querySelector(".film4-naam").innerHTML = topFilms[3];
-document.querySelector(".film5-ranking").innerHTML = 5;
-document.querySelector(".film5-naam").innerHTML = topFilms[4];
 
+topFilms = [
+    "The Shawshank Redemption", // 0
+    "The Godfather", // 1
+    "Schindler's List", //2
+    "Raging Bull",  //3
+    "Casablanca"  //4
+];
 
-
-function move(){
-document.querySelector(".btn1-up(1)" + ".btn1-down(2)").innerHTML = move;
-    
+for(var i=0;i < topFilms.length; i++){
+    document.getElementsByClassName("film-ranking")[i].innerHTML = i + 1;
+    document.getElementsByClassName("film-naam")[i].innerHTML = topFilms[i];
 }
+
+
+
+function moveup(film){
+console.log(film);
+
+}
+
+function movedown (film){
+console.log(film);
+}
+    
 
 
 
