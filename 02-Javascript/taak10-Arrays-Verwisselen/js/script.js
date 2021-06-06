@@ -16,22 +16,46 @@ topFilms = [
 ];
 
 for(var i=0;i < topFilms.length; i++){
-    document.getElementsByClassName("film-ranking")[i].innerHTML = i + 1;
-    document.getElementsByClassName("film-naam")[i].innerHTML = topFilms[i];
+    document.querySelector(".film-ranking"+(i+1)).innerHTML = i + 1;
+    document.querySelector(".film-naam"+(i+1)).innerHTML = topFilms[i];
 }
 
 
 
 function moveup(film){
-console.log(film);
+    // console.log(film);
+    // document.getElementsByClassName("film-naam")[i].innerHTML = topFilms[i];
+    //  document.querySelector(".film-naam"+(film+1)).innerHTML = topFilms[i=0]
+        document.querySelector(".film-naam"+(film)).innerHTML = topFilms[film];
+        document.querySelector(".film-naam"+(film+1)).innerHTML = topFilms[film-1];
+        
+    
+     
+    
+    
 
 }
 
-function movedown (film){
-console.log(film);
+function movedown(film){
+    // console.log(film);
+    // document.querySelector(".film-naam"+(film+1)).innerHTML = topFilms[0];
+    document.querySelector(".film-naam"+(film+2)).innerHTML = topFilms[film+1];
+    document.querySelector(".film-naam"+(film+1)).innerHTML = topFilms[film+1];
+
 }
     
 
 
+function resetvolgorde(){
+    document.querySelector(".film-naam"+(film+2)).innerHTML = topFilms[film+1];
+    document.querySelector(".film-naam"+(film+1)).innerHTML = topFilms[film+1];
+// location.reload();
+
+
+
+
+
+
+}
 
  
