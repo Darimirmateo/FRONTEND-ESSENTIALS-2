@@ -46,12 +46,12 @@ function movedown(film){
     
 
 
-function resetvolgorde(){
-    document.querySelector(".film-naam"+(film+2)).innerHTML = topFilms[film+1];
-    document.querySelector(".film-naam"+(film+1)).innerHTML = topFilms[film+1];
+
+function reset(topFilms){
+  
 // location.reload();
 
-
+document.getElementById("reset2").reset();
 
 
 
