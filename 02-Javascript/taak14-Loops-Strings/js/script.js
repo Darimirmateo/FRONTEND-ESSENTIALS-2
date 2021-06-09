@@ -6,4 +6,14 @@ function outputLetters(str){
 }
 
 var voorbeeldString = "Dit is een array van letters";
-console.log(voorbeeldString.length); // geeft terug: 
+console.log(voorbeeldString.length); // geeft terug:
+
+
+
+// var person = prompt("Yooo wat is je naam?");
+
+if (voorbeeldString != null) {
+  document.getElementById("demo").innerHTML =
+  "Hello " + voorbeeldString + "bedankt topper! ";
+  console.log
+}
