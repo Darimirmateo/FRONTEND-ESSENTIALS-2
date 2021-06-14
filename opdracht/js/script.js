@@ -27,7 +27,21 @@ function stringNaarPosities(str){
 function positiesNaarString(arr){
     var outputString = "";
     //TODO: opdracht 1
-    return outputString;
+    for (let i = 0; i < str.length; i++){
+        for (let j = 0; j < strAlfabet.length; j++) {
+            if(str[i].toUpperCase() == strAlfabet[j]){
+                outputArray.push(j);
+                // console.log("Letter: " + i + " = " + str[i] + " -> positie in alfabet = " + j);
+            }
+        }
+    }
+    console.log("berekende posities: " + outputArray.toString())
+    return outputArray;
+
+    
+    
+        
+
 }
 
 //Geeft een array terug waarbij het codeword herhaald wordt totdat de lengte overeenkomt met het te versleutelen bericht
