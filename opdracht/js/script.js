@@ -25,7 +25,6 @@ function stringNaarPosities(str){
 
 //Zet een array met posities om naar een string
 function positiesNaarString(arr){
-    var outputString = "";
     //TODO: opdracht 1
     for (let i = 0; i < str.length; i++){
         for (let j = 0; j < strAlfabet.length; j++) {
@@ -52,19 +51,19 @@ function vermenigvuldigCodeword(strInput, strCodeword){
     var intDiv = Math.floor(inputLength / codewordLength); //het aantal keer dat het codeword in zijn geheel in het bericht past
     var intMod = inputLength % codewordLength; //het aantal letters dat overblijft die nog moeten worden aangevuld
     //TODO: opdracht 2
-    for (let i = 0; i < vermenigvuldigCodeword; i++) {
-        if(inputLength[i] + codewordLength[i] > 100){
-            outputString.push((inputLength[i] + codewordLength[i])-100);
+
+    for (let i = 0; i < inputLength; i++) {
+        if(strInput.length[i] + codewordLength[i]){
+            outputString.push((math.floor[i] + codewordLength[i]));
+            console.log("Codeword full: " + outputString);
+              return outputString;
+            }
         }
-        else{ 
-            outputArray.push(strInput[i] + strCodeword[i]);
-        }
+        
         
     }
 
-    console.log("Codeword full: " + outputString);
-    return outputString;
-    }
+    
     
 
     
