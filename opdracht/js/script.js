@@ -19,7 +19,7 @@ function stringNaarPosities(str){
             }
         }
     }
-    // console.log("berekende posities: " + outputArray.toString())
+    console.log("berekende posities: " + outputArray.toString())
     return outputArray;
 }
 
@@ -35,7 +35,7 @@ function positiesNaarString(arr){
             }
         }
     }
-    // console.log("berekende posities: " + outputArray.toString())
+    console.log("berekende posities: " + outputArray.toString())
     return outputArray;
 
     
@@ -51,10 +51,18 @@ function vermenigvuldigCodeword(strInput, strCodeword){
 
     var intDiv = Math.floor(inputLength / codewordLength); //het aantal keer dat het codeword in zijn geheel in het bericht past
     var intMod = inputLength % codewordLength; //het aantal letters dat overblijft die nog moeten worden aangevuld
-
     //TODO: opdracht 2
+    for (let i = 0; i < vermenigvuldigCodeword; i++) {
+        if(inputLength[i] + codewordLength[i] > 100){
+            outputString.push((inputLength[i] + codewordLength[i])-100);
+        }
+        else{ 
+            outputArray.push(strInput[i] + strCodeword[i]);
+        }
+        
+    }
 
-    // console.log("Codeword full: " + outputString);
+    console.log("Codeword full: " + outputString);
     return outputString;
     }
     
@@ -76,8 +84,8 @@ function versleutel(){
 
     outputArray = [];
     for (let i = 0; i < arrInputPosities.length; i++) {
-        if(arrInputPosities[i] + arrCodewordPosities[i] > 26){
-            outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-26);
+        if(arrInputPosities[i] + arrCodewordPosities[i] > 100){
+            outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-100);
         }
         else{ 
             outputArray.push(arrInputPosities[i] + arrCodewordPosities[i]);
@@ -105,8 +113,8 @@ function ontsleutel(){
 
     outputArray = [];
     for (let i = 0; i < arrInputPosities.length; i++) {
-        if(arrInputPosities[i] + arrCodewordPosities[i] > 26){
-            outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-26);
+        if(arrInputPosities[i] + arrCodewordPosities[i] > 100){
+            outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-100);
         }
         else{ 
             outputArray.push(arrInputPosities[i] + arrCodewordPosities[i]);
