@@ -54,19 +54,17 @@ function vermenigvuldigCodeword(strInput, strCodeword){
 
     for (let i = 0; i < inputLength; i++) {
         if(strInput.length[i] + codewordLength[i]){
-            outputString.push((math.floor[i] + codewordLength[i]));
+            outputArray.push((math.floor[i] + codewordLength[i]));
             console.log("Codeword full: " + outputString);
-              return outputString;
-            }
-        }
-        
-        
+            return outputArray; 
     }
+        }
+         
+          
+            }
 
     
-    
-
-    
+  
 
 
 //functie die een een bericht versleuteld.
