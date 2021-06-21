@@ -63,59 +63,53 @@ function vermenigvuldigCodeword(strInput, strCodeword){
 
 //functie die een een bericht versleuteld.
 function versleutel(){
-    strInput = document.querySelector("#input").value;
-    strCodeword = document.querySelector("#codeword").value;   
-
-    console.log("input: " + strInput);
-    console.log("codeword: " + strCodeword);
-
-    strCodewordFull = vermenigvuldigCodeword(strInput, strCodeword);
-    arrCodewordPosities = stringNaarPosities(strCodewordFull);
-    arrInputPosities = stringNaarPosities(strInput);
-
-    outputArray = [];
-    for (let i = 0; i < arrInputPosities.length; i++) {
-        if(arrInputPosities[i] + arrCodewordPosities[i] > 100){
-            outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-100);
-        }
-        else{ 
-            outputArray.push(arrInputPosities[i] + arrCodewordPosities[i]);
-        }
-        
-    }
-
-
-    // console.log("versleuteld bericht: " + positiesNaarString(outputArray));
-    // document.querySelector("#output").value = positiesNaarString(outputArray);
-    strCodewordFull = [];
-}
-
-function ontsleutel(){
-    //TODO: opdracht 3
     strInput = document.querySelector("#input").value; 
     strCodeword = document.querySelector("#codeword").value;   
-
+ 
     console.log("input: " + strInput);
     console.log("codeword: " + strCodeword);
-
+ 
     strCodewordFull = vermenigvuldigCodeword(strInput, strCodeword);
     arrCodewordPosities = stringNaarPosities(strCodewordFull);
     arrInputPosities = stringNaarPosities(strInput);
-
+ 
     outputArray = [];
     for (let i = 0; i < arrInputPosities.length; i++) {
-        if(arrInputPosities[i] + arrCodewordPosities[i] > 100){
-            outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-100);
+        if(arrInputPosities[i] + arrCodewordPosities[i] > 25){
+            outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-26);
         }
         else{ 
             outputArray.push(arrInputPosities[i] + arrCodewordPosities[i]);
         }
         
     }
-
-
-    // console.log("versleuteld bericht: " + positiesNaarString(outputArray));
-    // document.querySelector("#output").value = positiesNaarString(outputArray);
+ 
+    console.log("versleuteld bericht: " + positiesNaarString(outputArray));
+    document.querySelector("#output").value = positiesNaarString(outputArray);
     strCodewordFull = [];
-
+}
+ 
+function ontsleutel(){
+    strInput = document.querySelector("#input").value; 
+    strCodeword = document.querySelector("#codeword").value;   
+ 
+    console.log("input: " + strInput);
+    console.log("codeword: " + strCodeword);
+ 
+    strCodewordFull = vermenigvuldigCodeword(strInput, strCodeword);
+    arrCodewordPosities = stringNaarPosities(strCodewordFull);
+    arrInputPosities = stringNaarPosities(strInput);
+ 
+    outputArray = [];
+    for (let i = 0; i < arrInputPosities.length; i++) {
+        if(arrInputPosities[i] - arrCodewordPosities[i] < 0){
+            outputArray.push((arrInputPosities[i] - arrCodewordPosities[i])+26);
+        }
+        else{ 
+            outputArray.push(arrInputPosities[i] - arrCodewordPosities[i]);
+        }
+        
+    }
+    console.log("ontsleuteld bericht: " + positiesNaarString(outputArray));
+    document.querySelector("#output").value = positiesNaarString(outputArray);
 }
