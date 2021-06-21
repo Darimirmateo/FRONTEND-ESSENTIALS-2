@@ -9,13 +9,13 @@ arrCodewordPosities = [];   //array van codeword posities
 arrOutputPosities = [];     //array van output posities
 
 //Zet een string om naar een array met posities
+//Zet een string om naar een array met posities
 function stringNaarPosities(str){
     outputArray = [];
     for (let i = 0; i < str.length; i++){
         for (let j = 0; j < strAlfabet.length; j++) {
             if(str[i].toUpperCase() == strAlfabet[j]){
                 outputArray.push(j);
-                // console.log("Letter: " + i + " = " + str[i] + " -> positie in alfabet = " + j);
             }
         }
     }
@@ -25,51 +25,45 @@ function stringNaarPosities(str){
 
 //Zet een array met posities om naar een string
 function positiesNaarString(arr){
-    //TODO: opdracht 1
-    for (let i = 0; i < str.length; i++){
-        for (let j = 0; j < strAlfabet.length; j++) {
-            if(str[i].toUpperCase() == strAlfabet[j]){
-                outputArray.push(j);
-                console.log("Letter: " + i + " = " + str[i] + " -> positie in alfabet = " + j);
-            }
-        }
+    var outputString = "";
+ 
+    for (let i = 0; i < arr.length; i++){
+        outputString = outputString + strAlfabet[arr[i]];
     }
-    console.log("berekende posities: " + outputArray.toString())
-    return outputArray;
-
-    
+    return outputString;
 }
 
 //Geeft een array terug waarbij het codeword herhaald wordt totdat de lengte overeenkomt met het te versleutelen bericht
 //Dus als het bericht STUDENT (7 letters) is en het codeword KLAS dan krijg je KLASKLA (7 letters) terug van deze functie.
-function vermenigvuldigCodeword(strInput, strCodeword){ 
+//Geeft een array terug waarbij het codeword herhaald wordt totdat de lengte overeenkomt met het te versleutelen bericht
+function vermenigvuldigCodeword(strInput, strCodeword){
     var outputString = "";
     
     var inputLength = strInput.length;
     var codewordLength = strCodeword.length;
-
-    var intDiv = Math.floor(inputLength / codewordLength); //het aantal keer dat het codeword in zijn geheel in het bericht past
-    var intMod = inputLength % codewordLength; //het aantal letters dat overblijft die nog moeten worden aangevuld
-    //TODO: opdracht 2
-
-    for (let i = 0; i < inputLength; i++) {
-        if(strInput.length[i] + codewordLength[i]){
-            outputArray.push((math.floor[i] + codewordLength[i]));
-            console.log("Codeword full: " + outputString);
-            return outputArray; 
+ 
+    var intDiv = Math.floor(inputLength / codewordLength);
+    var intMod = inputLength % codewordLength;
+ 
+    for (let i = 0; i < intDiv; i++){
+        outputString = outputString + strCodeword.toUpperCase();    
     }
-        }
-         
-          
+ 
+    for (let i = 0; i < intMod; i++){
+        for (let j = 0; j < strAlfabet.length; j++) {
+            if(strCodeword[i].toUpperCase() == strAlfabet[j]){
+                outputString = outputString + strAlfabet[j];
             }
-
-    
-  
-
+        }
+    }
+ 
+    console.log("Codeword full: " + outputString);
+    return outputString;
+}
 
 //functie die een een bericht versleuteld.
 function versleutel(){
-    strInput = document.querySelector("#input").value; 
+    strInput = document.querySelector("#input").value;
     strCodeword = document.querySelector("#codeword").value;   
 
     console.log("input: " + strInput);
